@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Now - RHAP Website Ideas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">RHAP Website Ideas</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="version1.html">Notification Banners</a></li>
+                <li><a href="version2.html">Patron Button</a></li>
+                <li><a href="version3.html" class="active">Popular Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="popular-section">
+            <h1>Popular Now Page</h1>
+            <p class="section-description">A dynamic navigation element showcasing trending content, helping new visitors discover popular episodes and discussions.</p>
+            
+            <!-- Popular Now Container -->
+            <div class="popular-container">
+                <div class="popular-header">
+                    <div class="show-icon">
+                        <img src="https://robhasawebsite.com/wp-content/themes/podcaster-child/assets/images/favicons/mstile-70x70.png" alt="RHAP Logo" />
+                    </div>
+                    <h2 class="popular-title">🔥 Popular Now</h2>
+                    <span class="update-time">Updated 5 minutes ago</span>
+                </div>
+                
+                <div class="popular-grid">
+                    <!-- Popular Item 1 -->
+                    <article class="popular-item">
+                        <div class="featured-image">
+                            <a href="#">
+                                <img src="https://robhasawebsite.com/wp-content/uploads/2025/05/CLUBCONDO_12-1024x576.jpg" alt="Survivor 46 Episode 3" />
+                            </a>
+                        </div>
+                        <div class="entry-header">
+                            <h3 class="entry-title">
+                                <a href="#">Survivor 46 Episode 3 Recap</a>
+                            </h3>
+                            <span class="byline">
+                                <a href="#" class="author">Rob Cesternino</a> and 
+                                <a href="#" class="author">Chappell</a>
+                            </span>
+                            <div class="popular-meta">
+                                <span class="views">2.5K views</span>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Popular Item 2 -->
+                    <article class="popular-item">
+                        <div class="featured-image">
+                            <a href="#">
+                                <img src="https://robhasawebsite.com/wp-content/uploads/2025/05/BB_thumbnail_20-1024x576.jpg" alt="Big Brother 25" />
+                            </a>
+                        </div>
+                        <div class="entry-header">
+                            <h3 class="entry-title">
+                                <a href="#">Big Brother 25 Cast Assessment</a>
+                            </h3>
+                            <span class="byline">
+                                <a href="#" class="author">Taran Armstrong</a> and 
+                                <a href="#" class="author">Aman Adwin</a>
+                            </span>
+                            <div class="popular-meta">
+                                <span class="views">1.8K views</span>
+                                <span class="time">5 hours ago</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Popular Item 3 -->
+                    <article class="popular-item">
+                        <div class="featured-image">
+                            <a href="#">
+                                <img src="https://robhasawebsite.com/wp-content/uploads/2025/05/Survivor_Australia_Deepdive_ZaraCallianiotis-1024x576.png" alt="Amazing Race 35" />
+                            </a>
+                        </div>
+                        <div class="entry-header">
+                            <h3 class="entry-title">
+                                <a href="#">Amazing Race 35 Episode 2 Discussion</a>
+                            </h3>
+                            <span class="byline">
+                                <a href="#" class="author">Shannon Guss</a>
+                            </span>
+                            <div class="popular-meta">
+                                <span class="views">1.2K views</span>
+                                <span class="time">1 day ago</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Popular Item 4 -->
+                    <article class="popular-item">
+                        <div class="featured-image">
+                            <a href="#">
+                                <img src="https://robhasawebsite.com/wp-content/uploads/2025/05/48_BB_12-1024x576.jpg" alt="Survivor 46 Episode 2" />
+                            </a>
+                        </div>
+                        <div class="entry-header">
+                            <h3 class="entry-title">
+                                <a href="#">Survivor 46 Episode 2 Analysis</a>
+                            </h3>
+                            <span class="byline">
+                                <a href="#" class="author">Mike Bloom</a> and 
+                                <a href="#" class="author">Liana Boraas</a>
+                            </span>
+                            <div class="popular-meta">
+                                <span class="views">950 views</span>
+                                <span class="time">2 days ago</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="popular-footer">
+                    <button class="refresh-button" onclick="refreshPopular()">
+                        <span class="refresh-icon">↻</span>
+                        Refresh
+                    </button>
+                    <span class="auto-refresh">Auto-refreshes every 5 minutes</span>
+                </div>
+            </div>
+
+           <!--- <div class="feature-description">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Real-time popularity tracking</li>
+                    <li>Auto-refresh functionality</li>
+                    <li>View count and time indicators</li>
+                    <li>Author attribution</li>
+                    <li>Featured images</li>
+                    <li>Responsive grid layout</li>
+                    <li>Manual refresh option</li>
+                </ul>
+            </div>-->
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+    <script>
+        function refreshPopular() {
+            const refreshButton = document.querySelector('.refresh-button');
+            refreshButton.classList.add('refreshing');
+            
+            // Get all popular items
+            const popularGrid = document.querySelector('.popular-grid');
+            const items = Array.from(popularGrid.children);
+            
+            // Shuffle the items
+            items.sort(() => Math.random() - 0.5);
+            
+            // Update each item with new data
+            items.forEach((item, index) => {
+                // Add a fade out effect
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                
+                // Update view counts and timestamps
+                const views = item.querySelector('.views');
+                const time = item.querySelector('.time');
+                
+                // Generate new random view count
+                const newViews = Math.floor(Math.random() * 2000) + 500;
+                views.textContent = `${(newViews / 1000).toFixed(1)}K views`;
+                
+                // Update timestamp
+                const times = ['just now', '5 minutes ago', '10 minutes ago', '15 minutes ago'];
+                time.textContent = times[Math.floor(Math.random() * times.length)];
+                
+                // Reorder items in the grid
+                setTimeout(() => {
+                    popularGrid.appendChild(item);
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 300 * index);
+            });
+            
+            // Update the refresh time
+            setTimeout(() => {
+                refreshButton.classList.remove('refreshing');
+                document.querySelector('.update-time').textContent = 'Updated just now';
+            }, 1500);
+        }
+
+        // Add CSS transitions
+        const style = document.createElement('style');
+        style.textContent = `
+            .popular-item {
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+            .refresh-button.refreshing {
+                pointer-events: none;
+                opacity: 0.7;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Auto-refresh every 5 minutes
+        setInterval(refreshPopular, 300000);
+    </script>
+</body>
+</html> 

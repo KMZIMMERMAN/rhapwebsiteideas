@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version 1 - RHAP Website Ideas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">RHAP Website Ideas</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="version1.html" class="active">Notification Banners</a></li>
+                <li><a href="version2.html">Patron Button</a></li>
+                <li><a href="version3.html">Popular Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="banner-section">
+            <h1>Version 1: Non-scrolling Notification Banner</h1>
+            <p class="section-description">A prominent banner showcasing the latest episode with a dismissible feature for returning visitors.</p>
+            
+            <!-- Notification Banner -->
+            <div class="notification-banner" id="notificationBanner">
+                <button class="notification-close" onclick="closeNotification()">×</button>
+                <div class="notification-container">
+                    <div class="notification-content">
+                        <div class="notification-title">🎙️ Latest Episode: Survivor 46 Episode 3 Recap</div>
+                        <div class="notification-text">Join Rob and special guest for an in-depth analysis of the latest tribal council!</div>
+                    </div>
+                    <a href="#" class="notification-cta">Listen Now</a>
+                </div>
+            </div>
+
+            <!--<div class="feature-description">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Eye-catching gradient background</li>
+                    <li>Clear hierarchy with title and description</li>
+                    <li>Prominent call-to-action button</li>
+                    <li>Dismissible with close button</li>
+                    <li>Fully responsive design</li>
+                </ul>
+            </div>-->
+        </section>
+
+        <section class="banner-section">
+            <h1>Version 2: Scrolling Notification Banner</h1>
+            <p class="section-description">An interactive banner displaying multiple recent episodes with smooth scrolling animation and clickable items.</p>
+            
+            <!-- Scrolling Banner -->
+            <div class="scrolling-banner">
+                <div class="scrolling-container">
+                    <div class="scrolling-content">
+                        <a href="#" class="scrolling-label" onclick="showAllEpisodes(event)">Recent Episodes</a>
+                        <div class="scrolling-text">
+                            <div class="scrolling-item" onclick="playEpisode('survivor46-ep3')">
+                                🎙️ Survivor 46 Episode 3 Recap
+                            </div>
+                            <div class="scrolling-item" onclick="playEpisode('survivor46-ep2')">
+                                🎙️ Survivor 46 Episode 2 Analysis
+                            </div>
+                            <div class="scrolling-item" onclick="playEpisode('survivor46-ep1')">
+                                🎙️ Survivor 46 Premiere Breakdown
+                            </div>
+                            <div class="scrolling-item" onclick="playEpisode('survivor45-finale')">
+                                🎙️ Survivor 45 Finale Recap
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="feature-description">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Smooth horizontal scrolling animation</li>
+                    <li>Pauses on hover for better readability</li>
+                    <li>Clickable "Recent Episodes" button</li>
+                    <li>Individual clickable episode items</li>
+                    <li>Visual separators between episodes</li>
+                    <li>Responsive design with optimized animation speed</li>
+                </ul>
+            </div>-->
+        </section>
+
+        <section class="banner-section">
+            <h1>Version 3: Upcoming Episodes Banner</h1>
+            <p class="section-description">A clean, modern banner with a light blue background showcasing upcoming episodes with a sleek dark blue accent color scheme. Features smooth scrolling animation and interactive elements.</p>
+            
+            <!-- Upcoming Episodes Banner -->
+            <div class="upcoming-banner">
+                <div class="upcoming-container">
+                    <div class="upcoming-icon">🔔</div>
+                    <div class="upcoming-content">
+                        <div class="upcoming-scroll">
+                            <div class="upcoming-item" onclick="showEpisodeDetails('survivor46-ep4')">
+                                <span class="time">Today, 8:00 PM</span>
+                                <span class="title">Survivor 46 Episode 4 Live Recap</span>
+                            </div>
+                            <div class="upcoming-item" onclick="showEpisodeDetails('survivor46-ep5')">
+                                <span class="time">Tomorrow, 7:00 PM</span>
+                                <span class="title">Survivor 46 Episode 5 Preview</span>
+                            </div>
+                            <div class="upcoming-item" onclick="showEpisodeDetails('survivor46-ep6')">
+                                <span class="time">Wed, 8:00 PM</span>
+                                <span class="title">Survivor 46 Episode 6 Live Recap</span>
+                            </div>
+                            <div class="upcoming-item" onclick="showEpisodeDetails('survivor46-ep7')">
+                                <span class="time">Thu, 7:00 PM</span>
+                                <span class="title">Survivor 46 Episode 7 Preview</span>
+                            </div>
+                            <!-- Duplicate items for seamless scrolling -->
+                            <div class="upcoming-item" onclick="showEpisodeDetails('survivor46-ep4')">
+                                <span class="time">Today, 8:00 PM</span>
+                                <span class="title">Survivor 46 Episode 4 Live Recap</span>
+                            </div>
+                            <div class="upcoming-item" onclick="showEpisodeDetails('survivor46-ep5')">
+                                <span class="time">Tomorrow, 7:00 PM</span>
+                                <span class="title">Survivor 46 Episode 5 Preview</span>
+                            </div>
+                            <div class="upcoming-item" onclick="showEpisodeDetails('survivor46-ep6')">
+                                <span class="time">Wed, 8:00 PM</span>
+                                <span class="title">Survivor 46 Episode 6 Live Recap</span>
+                            </div>
+                            <div class="upcoming-item" onclick="showEpisodeDetails('survivor46-ep7')">
+                                <span class="time">Thu, 7:00 PM</span>
+                                <span class="title">Survivor 46 Episode 7 Preview</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="upcoming-cta" onclick="showFullSchedule(event)">Listen Now</a>
+                </div>
+            </div>
+
+            <!--<div class="feature-description">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Light blue gradient background with white accents</li>
+                    <li>Dark blue interactive elements for strong contrast</li>
+                    <li>Smooth horizontal scrolling animation</li>
+                    <li>Clean, minimalist design with subtle hover effects</li>
+                    <li>White timestamps for enhanced readability</li>
+                    <li>Dark blue call-to-action button with hover animation</li>
+                    <li>Responsive design optimized for all devices</li>
+                </ul>
+            </div>-->
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+    <script>
+        function closeNotification() {
+            const banner = document.getElementById('notificationBanner');
+            banner.style.display = 'none';
+        }
+
+        function playEpisode(episodeId) {
+            // This function would handle playing the selected episode
+            console.log('Playing episode:', episodeId);
+            // Add your episode playing logic here
+        }
+
+        function showAllEpisodes(event) {
+            event.preventDefault();
+            // This function would handle showing all recent episodes
+            console.log('Showing all recent episodes');
+            // Add your logic to show all episodes here
+        }
+
+        function showEpisodeDetails(episodeId) {
+            // This function would handle showing episode details
+            console.log('Showing details for episode:', episodeId);
+            // Add your episode details logic here
+        }
+
+        function showFullSchedule(event) {
+            event.preventDefault();
+            // This function would handle showing the full schedule
+            console.log('Showing full schedule');
+            // Add your schedule display logic here
+        }
+    </script>
+</body>
+</html> 
